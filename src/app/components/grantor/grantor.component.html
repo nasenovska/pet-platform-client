@@ -1,0 +1,33 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+
+    <ul class="nav navbar-nav">
+      <li class="active"><a>Home</a></li>
+
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+
+      <li><a href="#"><span class="glyphicon glyphicon-log-in" (click)="logout()"></span> Logout </a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+
+  <header class="jumbotron my-4">
+    <li *ngFor="let grantor of grantors">
+      <p>
+        • Име на дарителя {{ grantor.name }} • Телефонен номер на дарителя {{ grantor.phoneNumber }}
+      </p>
+    </li>
+    <div class="row">
+
+    </div>
+  </header>
+
+</div>
+
+
+
+
+

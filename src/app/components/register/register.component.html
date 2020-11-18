@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="card card-container">
+    <img id="profile-img" class="profile-img-card"
+         src="https://steamuserimages-a.akamaihd.net/ugc/850468494997937019/A2456A9094F80752301D600CA902CDE3534F845D/"/>
+    <p id="profile-name" class="profile-name-card"></p>
+
+    <form name="form" #f="ngForm" novalidate>
+      <div class="alert alert-danger" role="alert" *ngIf="errorMessage">{{errorMessage}}</div>
+      <span id="reauth-email" class="reauth-email"></span>
+      <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !fullName.valid }">
+        <label for="fullName">Full Name</label>
+        <input type="text" class="form-control" name="fullName" id="fullName" [(ngModel)]="user.fullName"
+               #fullName="ngModel" required/>
+        <div *ngIf="f.submitted && !fullName.valid" class="green-warn">Please insert your name.</div>
+      </div>
+      <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+        <label for="username">Email Address</label>
+        <input type="text" class="form-control" name="username" id="username" pattern="[^ @]*@[^ @]*"
+               [(ngModel)]="user.username" #username="ngModel" required/>
+        <div *ngIf="f.submitted && !username.valid" class="help-block">
+
+          <div class="green-warn" *ngIf="username.errors.required">
+            Please insert your email address.
+          </div>
+          <div class="green-warn" *ngIf="username.errors.pattern">
+            Please insert a valid email address.
+          </div>
+
+        </div>
+      </div>
+      <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" name="password" id="password" [(ngModel)]="user.password"
+               #password="ngModel" required minlength="8"/>
+        <div *ngIf="f.submitted && !password.valid" class="help-block">
+
+          <div class="green-warn" *ngIf="password.errors.required">
+            Please insert new password.
+          </div>
+          <div class="green-warn" *ngIf="password.errors.minlength">
+            Password must contain at least one digit, one lower case letter, one upper case letter and should have 8 to
+            25 characters.
+          </div>
+
+        </div>
+      </div>
+      <div id="remember" class="checkbox">
+
+      </div>
+      <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" (click)="register()">Create account!
+      </button>
+      <button [routerLink]="['/login']" class="btn btn-lg btn-danger btn-block btn-cancel" type="button">Cancel</button>
+
+    </form>
+
+  </div>
+</div>
+
+
+
+
+
