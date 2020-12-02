@@ -34,4 +34,15 @@ export class AuthService {
         localStorage.removeItem('currentUser');
       });
   }
+
+  isUserLogged() {
+    if(localStorage.getItem('currentUser') !== null) {
+      return true;
+    }
+    return false;
+  }
+
+  getLoggedUser() {
+    return localStorage.getItem('currentUser');
+  }
 }

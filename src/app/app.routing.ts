@@ -5,6 +5,8 @@ import {ProfileComponent} from "./components/profile/profile.component";
 import {UrlPermission} from "./urlPermission/url.permission";
 import {GrantorComponent} from "./components/grantor/grantor.component";
 import {SignalComponent} from "./components/signal/signal.component";
+import {PostItemComponent} from "./components/post-item/post-item.component";
+import {PostsListComponent} from "./components/posts-list/posts-list.component";
 
 
 const appRoutes: Routes = [
@@ -13,7 +15,7 @@ const appRoutes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'grantors', component: GrantorComponent},
   {path: 'signals', component: SignalComponent},
-
+  {path: 'posts', component: PostsListComponent},
   {path: '**', redirectTo: '/login'}
 ];
 

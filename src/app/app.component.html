@@ -1,8 +1,62 @@
+<div class="app-main">
+  <!--Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" routerLink="">{{ title }}</a>
+    <!--/.Brand -->
 
+    <!-- Collapse -->
+    <button class="navbar-toggler hidden" type="button" data-toggle="collapse" data-target="#navbarContent"
+            aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation" (click)="isMenuCollapsed = !isMenuCollapsed">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!--/.Collapse -->
 
+    <!-- Links -->
+    <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse" id="navbarContent">
 
-      <router-outlet></router-outlet>
+      <!-- Left -->
+      <ul class="nav navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link waves-effect waves-light" [routerLink]="['/signals']">Signals
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-effect waves-light" [routerLink]="['/posts']">Posts</a>
+        </li>
+      </ul>
+      <!--/.Left -->
 
+      <!-- Right -->
+<!--      <ul class="nav navbar-nav ml-auto nav-flex-icons navbar-right" *ngIf="isUserLogged">-->
+<!--        <li class="nav-item">-->
+<!--          <a class="nav-link waves-effect waves-light" routerLink="" role="button">Donate</a>-->
+<!--        </li>-->
+      <!--        <li class="nav-item">-->
+      <!--          <a class="nav-link waves-effect waves-light" routerLink="" role="button">My Profile</a>-->
+      <!--        </li>-->
+<!--        <li class="nav-item">-->
+<!--          <a class="nav-link waves-effect waves-light" role="button" (click)="logout()">Logout</a>-->
+<!--        </li>-->
+<!--      </ul>-->
 
+      <ul class="nav navbar-nav ml-auto nav-flex-icons navbar-right" >
+        <li class="nav-item">
+          <a class="nav-link waves-effect waves-light" [routerLink]="['/login']" role="button">Log in</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-effect waves-light" role="button" [routerLink]="['/register']">Register</a>
+        </li>
+      </ul>
+      <!--/.Right -->
 
+    </div>
+    <!--/.Links -->
+  </nav>
+  <!--/.Navbar -->
+  <div class="container justify-content-center mt-4">
+    <router-outlet></router-outlet>
+  </div>
+</div>
 

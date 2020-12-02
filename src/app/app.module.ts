@@ -17,6 +17,11 @@ import {GrantorComponent} from "./components/grantor/grantor.component";
 import {SignalComponent} from "./components/signal/signal.component";
 import {SignalService} from "./services/signal.service";
 import {GrantorService} from "./services/grantor.service";
+import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import { PostsListComponent } from './components/posts-list/posts-list.component';
+import { PostItemComponent } from './components/post-item/post-item.component';
+import {FavouriteButtonComponent} from "./components/favourite-button/favourite-button.component";
+import {FormatPipe} from "./pipes/format.pipe";
 
 
 @NgModule({
@@ -26,11 +31,15 @@ import {GrantorService} from "./services/grantor.service";
     RegisterComponent,
     ProfileComponent,
     GrantorComponent,
-    SignalComponent
+    SignalComponent,
+    PostsListComponent,
+    PostItemComponent,
+    FavouriteButtonComponent,
+    FormatPipe
   ],
-  imports: [
-    BrowserModule, HttpModule, FormsModule, routing, FacebookModule.forRoot(),
-  ],
+    imports: [
+        BrowserModule, HttpModule, FormsModule, routing, FacebookModule.forRoot(), NgbModule,
+    ],
   providers: [AuthService, AccountService, UrlPermission, SignalService, GrantorService],
   bootstrap: [AppComponent]
 })

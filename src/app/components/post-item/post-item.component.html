@@ -1,0 +1,20 @@
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img class="card-img-top" [src]="post.imageUrl" [alt]="post.title">
+    </div>
+    <div class="flip-card-back">
+      <div class="row card-title">
+          <div class="btn btn-link btn-lg" type="button" (click)="navigateToView()"> {{post.title}} </div>
+      </div>
+      <div class="row">
+        <p class="card-text multiline-ellipsis">{{post.description | format: 80 }}</p>
+      </div>
+      <div class="row"
+           [class]="'justify-content-between'">
+        <i class="btn btn-outline-primary ml-2" (click)="navigateToView()">Details</i>
+        <i class="btn btn-outline-dark ml-2 fa fa-times" type="button" aria-hidden="true" (click)="onRemoveClick()"></i>
+      </div>
+    </div>
+  </div>
+</div>

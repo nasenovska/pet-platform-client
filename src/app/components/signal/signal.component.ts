@@ -23,14 +23,4 @@ export class SignalComponent implements OnInit {
       this.signals = signals;
     });
   }
-
-  logout() {
-    this.authService.logout()
-      .subscribe(
-        data => {
-          this.router.navigate(['/login']);
-        },
-        () => {
-        });
-  }
 }

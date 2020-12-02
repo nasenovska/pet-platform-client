@@ -1,0 +1,30 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  min-height: 1000vh;
+}
+
+.app-main {
+  background-image:url("../assets/images/991-ratio-debela-kotka.jpg");
+  background-size: cover;
+  height: 100% !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+  opacity: 0.8;
+
+}
+.navbar{
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.waves-light{
+  color: white;
+}
+
+.navbar-brand{
+  color: white;
+  font-size: x-large;
+}

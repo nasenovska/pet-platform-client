@@ -1,7 +1,6 @@
 body, html {
   height: 100%;
   background-repeat: no-repeat;
-  background-image: url("background-dog-1920x1200.jpg");
 }
 
 .card-container.card {
@@ -22,23 +21,23 @@ body, html {
   color: #1e2005
 }
 
-.card {
-  background-color: #677101;
+.register {
+  background-color: #c6bcbb;
   /* just in case there no content*/
   padding: 20px 25px 30px;
   margin: 0 auto 25px;
   margin-top: 150px;
-  position: absolute;
+  position: center;
   left: auto;
-  width: 470px;
-  height: 600px;
+  width: 470px !important;
+  height: 600px !important;
   /* shadows and rounded borders */
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
-  -moz-box-shadow: 0px 20px 20px rgb(23, 37, 19);
-  -webkit-box-shadow: 0px 20px 20px rgb(23, 37, 19);
-  box-shadow: 0px 20px 20px rgb(23, 37, 19);
+  -moz-box-shadow: 0px 20px 20px rgb(120, 109, 99);
+  -webkit-box-shadow: 0px 20px 20px rgb(74, 70, 60);
+  box-shadow: 0px 20px 20px rgb(110, 101, 84);
 }
 
 .profile-img-card {
@@ -93,14 +92,14 @@ body, html {
 }
 
 .form-signin .form-control:focus {
-  background-color: #1e2005;
+  background-color:  rgb(104, 145, 162);
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgb(104, 145, 162);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgb(104, 145, 162);
 }
 
 .btn.btn-signin, .btn-cancel {
-  background-color: #363b05;
+  background-color: #745c47;
   padding: 0px;
   font-weight: 700;
   font-size: 14px;
@@ -116,13 +115,13 @@ body, html {
 }
 
 .btn.btn-cancel {
-  background-color: #363b05;
+  background-color: #4f320a;
 }
 
 .btn.btn-signin:hover,
 .btn.btn-signin:active,
 .btn.btn-signin:focus {
-  background-color: #1e2005;
+  background-color: #d2a069;
 }
 
 .forgot-password {
@@ -132,5 +131,5 @@ body, html {
 .forgot-password:hover,
 .forgot-password:active,
 .forgot-password:focus {
-  background-color: #1e2005;
+  background-color: rgb(181, 117, 60);
 }

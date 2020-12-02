@@ -1,7 +1,6 @@
 body, html {
   height: 100%;
   background-repeat: no-repeat;
-  background-image: url("background-dog-1920x1200.jpg");
 }
 
 .card-container.card {
@@ -18,27 +17,27 @@ body, html {
   cursor: default;
 }
 
-.card {
-  background-color: #677101;
+.login {
+  background-color: #c6bcbb;
   /* just in case there no content*/
   padding: 20px 25px 30px;
   margin: 0 auto 25px;
   margin-top: 150px;
-  position: absolute;
+  position: center;
   left: auto;
-  width: 470px;
-  height: 520px;
+  width: 470px !important;
+  height: 520px !important;
   /* shadows and rounded borders */
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
-  -moz-box-shadow: 0px 20px 20px rgb(23, 37, 19);
-  -webkit-box-shadow: 0px 20px 20px rgb(23, 37, 19);
-  box-shadow: 0px 20px 20px rgb(23, 37, 19);
+  -moz-box-shadow: 0px 20px 20px rgb(120, 109, 99);
+  -webkit-box-shadow: 0px 20px 20px rgb(74, 70, 60);
+  box-shadow: 0px 20px 20px rgb(110, 101, 84);
 }
 
 .help-block {
-  color: #1e2005
+  color: #f8f7f7
 }
 
 .profile-img-card {
@@ -100,7 +99,7 @@ body, html {
 }
 
 .btn.btn-signin {
-  background-color: #363b05;
+  background-color: #745c47;
   padding: 0px;
   font-weight: 700;
   font-size: 14px;
@@ -116,7 +115,7 @@ body, html {
 }
 
 .btn-link {
-  color: #363b05;
+  color: #ffffff;
   alignment: center;
   padding-left: 58px;
 }
@@ -130,7 +129,7 @@ body, html {
 .btn.btn-signin:hover,
 .btn.btn-signin:active,
 .btn.btn-signin:focus {
-  background-color: #1e2005;
+  background-color: #d2a069;
 }
 
 .forgot-password {
@@ -140,5 +139,5 @@ body, html {
 .forgot-password:hover,
 .forgot-password:active,
 .forgot-password:focus {
-  color: rgb(12, 97, 33);
+  color: rgb(181, 117, 60);
 }
